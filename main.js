@@ -50,3 +50,20 @@ function calculateResults() {
         document.querySelector(".total strong").textContent = `$${totalPerPerson.toFixed(2)}`;
     }
 }
+
+function resetAll() {
+    
+    bill = 0;
+    tipPercentage = 0;
+    numberOfPeople = 0;
+    buttonSelected = null;
+
+    document.querySelector("#bill").value = "";
+    document.querySelector("#custom-tip").value = "";
+    document.querySelector("#people").value = "";
+
+    document.querySelector(".amount strong").textContent = "$0.00";
+    document.querySelector(".total strong").textContent = "$0.00";
+
+    removeClassButtonSelected();
+}

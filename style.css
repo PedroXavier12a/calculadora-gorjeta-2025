@@ -178,13 +178,13 @@ input::-webkit-outer-spin-button {
     display: none;
 }
 
-/* ✅ Corrigido: botão selecionado destacado corretamente */
+
 .button-selected {
     background-color: var(--topaz) !important;
     color: var(--sherpa-blue) !important;
 }
 
-/* Responsivo */
+
 @media (min-width: 920px) {
     header {
         margin-top: 5rem;
