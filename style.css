@@ -13,6 +13,8 @@
     --greyish-turquoise: #5E7A7E;
     --black-squeeze: #F3F9FA;
     --sherpa-blue: #00474B;
+    --beetle-green:#54787B;
+    --topaz: #26C2AC;
 }
 body {
     
@@ -62,12 +64,40 @@ main {
         opacity:0.35;
      }
     }
+    .input-box:has(input:focus){
+        outline: 2px solid var(--topaz);
+    }
     .tip > div {
         display: grid;
         grid-template-columns: 1fr 1fr;
         gap: 1.6rem;
+        margin-top: 1rem;
+        button{
+            border: none;
+            background-color: var(--sherpa-blue);
+            color: var(--white);
+            font-size: 2.4rem;
+            border-radius: .5rem;
+            padding-block: .6rem;
+            font-weight: 700;
+        }
         input {
             width: 100%;
+            background-color: var(--black-squeeze);
+            font-size: 2.4rem;
+            text-align: center;
+            border: none;
+            border-radius: .5rem;
+            outline: none;
+            font-weight: 700;
+            color: var(--sherpa-blue);
+           
+            &::placeholder {
+            color: var(--beetle-green);
+            }
+            &:focus {
+                outline: 2px solid var(--topaz);
+            }
         }
     }
 }
