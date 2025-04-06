@@ -1,5 +1,6 @@
 @import url('https://fonts.googleapis.com/css2?family=Space+Mono:ital,wght@0,400;0,700;1,400;1,700&display=swap');
-*{
+
+* {
     margin: 0;
     padding: 0;
     box-sizing: border-box;
@@ -13,158 +14,182 @@
     --greyish-turquoise: #5E7A7E;
     --black-squeeze: #F3F9FA;
     --sherpa-blue: #00474B;
-    --beetle-green:#54787B;
+    --beetle-green: #54787B;
     --topaz: #26C2AC;
     --regent-gray: #7F9D9F;
     --water-leaf: #9FE8DF;
 }
+
 body {
-    
     font-size: 1.6rem;
     background: var(--jagged-ice);
 }
+
 header {
     padding-top: 5rem;
     padding-bottom: 4rem;
-
     display: flex;
     justify-content: center;
 }
+
 main {
     background: var(--white);
     border-radius: 2.5rem 2.5rem 0 0;
     padding: 3.2rem 2.4rem;
 }
+
 .info {
     padding-inline: .8rem;
-    strong {
+}
+
+.info strong {
     color: var(--greyish-turquoise);
     display: block;
     margin-bottom: .6rem;
-    }
-    div {
+}
+
+.info > div {
     margin-bottom: 3.2rem;
-    }
-    .input-box {
+}
+
+.input-box {
     background: var(--black-squeeze);
     padding: .6rem 1.8rem;
     border-radius: .5rem;
     display: flex;
     align-items: center;
-     input {
-        background: transparent;
-        border: none;
-        text-align: right;
-        width: 100%;
-        outline: none;
-        font-size: 2.4rem;
-        font-weight: 700;
-        color: var(--sherpa-blue);
-     }
-     input::placeholder {
-        color: var(--sherpa-blue);
-        opacity:0.35;
-     }
-    }
-    .input-box:has(input:focus){
-        outline: 2px solid var(--topaz);
-    }
-    .tip > div {
-        display: grid;
-        grid-template-columns: 1fr 1fr;
-        gap: 1.6rem;
-        margin-top: 1rem;
-        button{
-            border: none;
-            background-color: var(--sherpa-blue);
-            color: var(--white);
-            font-size: 2.4rem;
-            border-radius: .5rem;
-            padding-block: .6rem;
-            font-weight: 700;
-        }
-        button:hover {
-           background-color: var(--water-leaf);
-           cursor: pointer;
-           transition: .3s;
-        }
-        .button-selected {
-            background: var(--topaz);
-        }
-        input {
-            width: 100%;
-            background-color: var(--black-squeeze);
-            font-size: 2.4rem;
-            text-align: center;
-            border: none;
-            border-radius: .5rem;
-            outline: none;
-            font-weight: 700;
-            color: var(--sherpa-blue);
-           
-            &::placeholder {
-            color: var(--beetle-green);
-            }
-            &:focus {
-                outline: 2px solid var(--topaz);
-            }
-        }
-    }
 }
+
+.input-box input {
+    background: transparent;
+    border: none;
+    text-align: right;
+    width: 100%;
+    outline: none;
+    font-size: 2.4rem;
+    font-weight: 700;
+    color: var(--sherpa-blue);
+}
+
+.input-box input::placeholder {
+    color: var(--sherpa-blue);
+    opacity: 0.35;
+}
+
+.input-box:has(input:focus) {
+    outline: 2px solid var(--topaz);
+}
+
+.tip > div {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 1.6rem;
+    margin-top: 1rem;
+}
+
+.tip button {
+    border: none;
+    background-color: var(--sherpa-blue);
+    color: var(--white);
+    font-size: 2.4rem;
+    border-radius: .5rem;
+    padding-block: .6rem;
+    font-weight: 700;
+    transition: 0.3s;
+}
+
+.tip button:hover {
+    background-color: var(--water-leaf);
+    cursor: pointer;
+}
+
+.tip input {
+    width: 100%;
+    background-color: var(--black-squeeze);
+    font-size: 2.4rem;
+    text-align: center;
+    border: none;
+    border-radius: .5rem;
+    outline: none;
+    font-weight: 700;
+    color: var(--sherpa-blue);
+}
+
+.tip input::placeholder {
+    color: var(--beetle-green);
+}
+
+.tip input:focus {
+    outline: 2px solid var(--topaz);
+}
+
 .results {
     background-color: var(--sherpa-blue);
     border-radius: 1.5rem;
     padding: 4rem 2.4rem 2.4rem;
+}
 
-    .amount,
-    .total {
-        display: flex;
-        justify-content: space-between;
-        align-items: center;
-        margin-bottom: 2.4rem;
+.amount,
+.total {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-bottom: 2.4rem;
+}
 
-        p{
-            color: var(--white);
-            font-weight: 700;
+.amount p,
+.total p {
+    color: var(--white);
+    font-weight: 700;
+}
 
-            span {
-                color: var(--regent-gray);
-                font: 1.3rem;
-            }
-        }
-        strong {
-            color: var(--topaz);
-            font-size: 3.2rem;
-        }
-   
-    }
-        button {
-            width: 100%;
-            font-size: 2rem;
-            font-weight: 700;
-            text-transform: uppercase;
-            background: var(--topaz);
-            color: var(--sherpa-blue);
-            border: none;
-            padding-block: .9rem;
-            border-radius: .5rem;
+.amount p span,
+.total p span {
+    color: var(--regent-gray);
+    font-size: 1.3rem;
+}
 
-        }
-        button:hover {
-            background: var(--water-leaf);
-            cursor: pointer;
-            transition: .3s;
-        }
+.amount strong,
+.total strong {
+    color: var(--topaz);
+    font-size: 3.2rem;
+}
+
+.results button {
+    width: 100%;
+    font-size: 2rem;
+    font-weight: 700;
+    text-transform: uppercase;
+    background: var(--topaz);
+    color: var(--sherpa-blue);
+    border: none;
+    padding-block: .9rem;
+    border-radius: .5rem;
+    transition: 0.3s;
+}
+
+.results button:hover {
+    background: var(--water-leaf);
+    cursor: pointer;
 }
 
 input::-webkit-inner-spin-button,
 input::-webkit-outer-spin-button {
     display: none;
 }
-@media(min-width:920px) {
+
+/* ✅ Corrigido: botão selecionado destacado corretamente */
+.button-selected {
+    background-color: var(--topaz) !important;
+    color: var(--sherpa-blue) !important;
+}
+
+/* Responsivo */
+@media (min-width: 920px) {
     header {
         margin-top: 5rem;
     }
+
     main {
         display: flex;
         max-width: 92rem;
@@ -172,25 +197,25 @@ input::-webkit-outer-spin-button {
         border-radius: 2.5rem;
         padding: 4.8rem;
         gap: 4.8rem;
+    }
 
+    main section {
+        width: 100%;
+    }
 
-        section {
-            width: 100%;
-        }
-        .info .tip div {
-            grid-template-columns: repeat(3, 1fr);
-        }
-        .results {
-            padding: 4rem;
-            display: flex;
-            flex-direction: column;
-            justify-content: space-between;
+    .info .tip div {
+        grid-template-columns: repeat(3, 1fr);
+    }
 
+    .results {
+        padding: 4rem;
+        display: flex;
+        flex-direction: column;
+        justify-content: space-between;
+    }
 
-            .amount strong,
-            .total strong {
-                font-size: 4.8rem;
-            }
-        }
+    .amount strong,
+    .total strong {
+        font-size: 4.8rem;
     }
 }
